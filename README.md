@@ -1,5 +1,5 @@
-# jetsonTX2GPIO
-A straightforward C/C++ library to interface with the NVIDIA Jetson TX2 Development Kit GPIO pins.
+# jetsonGPIO
+A straightforward C/C++ library to interface with the NVIDIA Jetson NANO Development Kit GPIO pins.
 
 Modified based on https://github.com/jetsonhacks/jetsonTX1GPIO
 
@@ -18,11 +18,11 @@ exampleGPIApp.cpp describes a simple usage case using a tactile button and LED a
 # Description
 To add more GPIO pins, modify jetsonGPIO.h and add pin numbers you want.
 
-* Example: 
-setup and initialize GPIO388 (Pin37) as output pin on TX2:
+* Example:
+setup and initialize GPIO78 (Pin40) as output pin on NANO:
 ```
 /* To initialize */
-jetsonTX2GPIONumber LEDControlPin = gpio388; 
+jetsonGPIONumber LEDControlPin = gpio78;
 gpioExport(LEDControlPin);
 gpioSetDirection(LEDControlPin,outputPin);
 
@@ -32,4 +32,3 @@ gpioSetValue(LEDControlPin, off);    //Pull low
 ```
 
 That's it, very easy. If you like to use C/C++ to control GPIO Pin, just include "jetsonGPIO.h" in the cpp file.
-
